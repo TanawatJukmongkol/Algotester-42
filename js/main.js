@@ -58,7 +58,13 @@ class Stack {
 					this[s[1]].push(this[s[1]].shift());
 					break;
 				} else if (s[1] == "r") {
-					this[s[2]].unshift(this[s[2]].pop());
+					if (this[s[2]])
+						this[s[2]].unshift(this[s[2]].pop());
+					else
+					{
+						this.a.push(this.a.shift());
+						this.b.push(this.b.shift());
+					}
 					break;
 				}
 				console.log(`"${s}" is not an instruction!`);
