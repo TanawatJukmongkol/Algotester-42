@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Algotester 42</title>
+		<script src="./js/main.js" defer></script>
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+		<div class="main-content-container">
+			<div style="width: 60%;">
+				<div id="gutter-container"></div>
+				<div style="height: min-content;">
+					<span>
+						Interval [ms]:
+						<input type="number" value="500" min="0" max="1000" id="speed_inp">
+					</span>
+					<div>
+						<span id="resault">Waiting for resault...</span>
+						<span>
+							<input type="button" value="reset" id="reset_inp">
+							<input type="button" value="next" id="next_inp">
+							<input type="button" value="stop" id="stop_inp">
+							<input type="button" value="run" id="run_inp">
+						</span>
+					</div>
+				</div>
+			</div>
+			<div>
+				<canvas id="cnv"></canvas>
+			</div>
+		</div>
+	</body>
+</html>
