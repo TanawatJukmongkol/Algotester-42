@@ -9,7 +9,7 @@ all: build visualise
 	make -C ${MAKEFILE} all
 genfile:
 	@ruby -e "puts (${START}..${END}).to_a.shuffle.join(' ')" > rand.txt
-	@./push_swap `cat rand.txt` > instr.txt
+	@${TEST_DIR}/push_swap `cat rand.txt` > instr.txt
 visualise:
 	@echo "Open up Chrome and type http://localhost:4269 into the address bar, if the browser didn't pop up."
 	if [[ "$(shell grep Microsoft /proc/version)" ]]; then\
