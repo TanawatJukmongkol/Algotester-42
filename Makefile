@@ -8,7 +8,7 @@ all: genfile visualise
 	make -C ${MAKEFILE} all
 genfile:
 	@seq ${MIN} ${MAX} | shuf | xargs > rand.txt
-	@${TEST_DIR}/push_swap `cat rand.txt` > instr.txt
+	@${TEST_DIR}push_swap `cat rand.txt` > instr.txt
 visualise:
 	@echo "Open up Chrome and type http://localhost:4269 into the address bar, if the browser didn't pop up."
 	@if [ ! -z "$(shell grep Microsoft /proc/version)" ]; then\
