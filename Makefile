@@ -1,7 +1,6 @@
 
 MIN		= 1
 MAX		= 500
-STACK_LEN	= 500
 
 TEST_DIR	= ../
 MAKEFILE	= ${addsuffix ${TEST_DIR}, Makefile}
@@ -9,7 +8,7 @@ MAKEFILE	= ${addsuffix ${TEST_DIR}, Makefile}
 all: genfile visualise
 	make -C ${MAKEFILE} all
 genfile:
-	shuf -i "${MIN}-${MAX}" -n ${STACK_LEN} -o rand.txt
+	@seq ${MIN} ${MAX} | shuf -o rand.txt
 	@${TEST_DIR}/push_swap `cat rand.txt` > instr.txt
 visualise:
 	@echo "Open up Chrome and type http://localhost:4269 into the address bar, if the browser didn't pop up."
